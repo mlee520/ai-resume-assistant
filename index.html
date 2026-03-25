@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI求职智能体 - 智能化简历优化与生成工具</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">🤖</span>
+                    <span class="logo-text">AI求职智能体</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#intro">产品介绍</a></li>
+                    <li><a href="#demo">功能演示</a></li>
+                    <li><a href="#cases">案例展示</a></li>
+                    <li><a href="#api">API文档</a></li>
+                </ul>
+                <a href="#demo" class="cta-button">立即体验</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">智能化简历优化与生成</h1>
+                    <p class="hero-subtitle">基于AI技术的求职辅助工具，帮助求职者快速创建专业简历，提升面试通过率</p>
+                    <div class="hero-buttons">
+                        <a href="#demo" class="btn btn-primary">开始体验</a>
+                        <a href="#intro" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="mockup-title">AI简历优化器</div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-text">
+                                <h3>销售经理简历优化</h3>
+                                <p>优化前：普通销售经历描述</p>
+                                <p>优化后：数据驱动的销售策略专家</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                                <p class="progress-text">关键词匹配度提升 85%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="intro" class="section intro-section">
+            <div class="container">
+                <h2 class="section-title">产品介绍</h2>
+                <p class="section-subtitle">AI求职智能体是一款基于人工智能技术的求职辅助工具，专为求职者提供智能化简历优化和生成服务</p>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="feature-title">简历解析</h3>
+                        <p class="feature-desc">智能解析简历文档，提取关键信息（工作经历、教育背景、技能等），生成结构化数据</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3 class="feature-title">简历优化</h3>
+                        <p class="feature-desc">基于目标岗位要求，优化简历内容，提升语言专业性和关键词匹配度</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="feature-title">简历生成</h3>
+                        <p class="feature-desc">填空式自动化生成专业简历，用户只需提供基本信息，AI补全完整简历结构</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="feature-title">面试押题</h3>
+                        <p class="feature-desc">基于岗位JD自动生成结构化面试问题，提供参考答案和评分要点，助力面试准备</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">竞争力分析</h3>
+                        <p class="feature-desc">量化简历与岗位匹配度，提供可视化分析报告和具体改进建议，提升求职竞争力</p>
+                    </div>
+                </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h3 class="feature-title">求职信生成</h3>
+                        <p class="feature-desc">基于简历和岗位JD自动生成个性化求职信，突出匹配优势，提升面试邀请率</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3 class="feature-title">转行适配方案</h3>
+                        <p class="feature-desc">分析现有技能与目标岗位差距，提供学习路径、简历优化建议和转行路线图</p>
+                    </div>
+            </div>
+        </section>
+
+        <section id="demo" class="section demo-section">
+            <div class="container">
+                <h2 class="section-title">功能演示</h2>
+                <p class="section-subtitle">体验AI求职智能体的七大核心功能</p>
+                
+                <div class="demo-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="parse">简历解析</button>
+                        <button class="tab-btn" data-tab="optimize">简历优化</button>
+                        <button class="tab-btn" data-tab="generate">简历生成</button>
+                        <button class="tab-btn" data-tab="interview">面试押题</button>
+                        <button class="tab-btn" data-tab="competitiveness">竞争力分析</button>
+                        <button class="tab-btn" data-tab="cover-letter">求职信生成</button>
+                        <button class="tab-btn" data-tab="career-transition">转行适配方案</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div id="parse-tab" class="tab-pane active">
+                            <div class="demo-card">
+                                <h3>上传简历文件，查看解析结果</h3>
+                                <p>支持DOCX格式简历，解析后生成结构化JSON数据</p>
+                                <div class="upload-area" id="uploadArea">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>点击上传或拖拽简历文件（.docx）</p>
+                                    <input type="file" id="resumeFile" accept=".docx" style="display: none;">
+                                    <button class="btn btn-outline" id="uploadBtn">选择文件</button>
+                                </div>
+                                <div class="demo-result">
+                                    <h4>解析结果示例（销售经理）</h4>
+                                    <div class="json-preview" id="parsePreview">
+                                        <!-- JSON预览将通过JavaScript动态加载 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="optimize-tab" class="tab-pane">
+                            <div class="demo-card">
+                                <h3>简历优化前后对比</h3>
+                                <p>基于目标岗位要求，AI优化简历内容，提升专业性和匹配度</p>
+                                <div class="comparison">
+                                    <div class="before">
+                                        <h4>优化前</h4>
+                                        <div class="content-preview" id="beforeContent">
+                                            <!-- 优化前内容将通过JavaScript加载 -->
+                                        </div>
+                                    </div>
+                                    <div class="arrow">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                    <div class="after">
+                                        <h4>优化后</h4>
+                                        <div class="content-preview" id="afterContent">
+                                            <!-- 优化后内容将通过JavaScript加载 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="optimization-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">+33%</span>
+                                        <span class="metric-label">可读性提升</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">85%</span>
+                                        <span class="metric-label">关键词匹配度</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">+40%</span>
+                                        <span class="metric-label">专业术语使用</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="generate-tab" class="tab-pane">
+                            <div class="demo-card">
+                                <h3>AI简历生成器</h3>
+                                <p>填写基本信息，AI自动生成完整专业简历</p>
+                                <form id="generateForm">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="name">姓名</label>
+                                            <input type="text" id="name" placeholder="例如：李明" value="李明">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="age">年龄</label>
+                                            <input type="number" id="age" placeholder="例如：28" value="28">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="position">目标岗位</label>
+                                        <input type="text" id="position" placeholder="例如：产品经理" value="产品经理">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="experience">工作年限</label>
+                                        <input type="text" id="experience" placeholder="例如：5年" value="5年">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="skills">核心技能（用逗号分隔）</label>
+                                        <input type="text" id="skills" placeholder="例如：产品规划,用户调研,数据分析" value="产品规划,用户调研,数据分析,团队协作">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">生成简历</button>
+                                </form>
+                                <div class="generated-resume" id="generatedResume">
+                                    <!-- 生成的简历将通过JavaScript加载 -->
+                                </div>
+                            </div>
+                                                <div id="interview-tab" class="tab-pane">
+                            <div class="demo-card">
+                                <h3>AI面试押题生成器</h3>
+                                <p>输入岗位描述，AI自动生成结构化面试问题及答案参考</p>
+                                <div class="jd-input-area">
+                                    <h4>岗位描述 (JD)</h4>
+                                    <textarea id="jdText" placeholder="例如：职位：Python开发工程师
+职责：
+1. 负责后端系统开发与维护
+2. 参与系统架构设计和技术选型
+3. 编写高质量、可维护的代码
+4. 与团队成员协作完成项目任务
+
+要求：
+1. 3年以上Python开发经验
+2. 熟悉Django/Flask框架
+3. 掌握MySQL/Redis等数据库技术
+4. 具备良好的沟通能力和团队合作精神" rows="8"></textarea>
+                                    <div class="input-controls">
+                                        <div class="form-group">
+                                            <label for="interviewQuestionCount">问题数量</label>
+                                            <input type="number" id="interviewQuestionCount" value="15" min="5" max="30">
+                                        </div>
+                                        <button class="btn btn-primary" id="generateInterviewQuestions">生成面试问题</button>
+                                    </div>
+                                </div>
+                                <div class="interview-results" id="interviewResults">
+                                    <h4>生成的面试问题</h4>
+                                    <div class="questions-container" id="questionsContainer">
+                                        <!-- 面试问题将通过JavaScript动态加载 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        <div id="competitiveness-tab" class="tab-pane">
+                            <div class="demo-card">
+                                <h3>简历竞争力分析</h3>
+                                <p>上传简历和岗位描述，AI分析匹配度并提供改进建议</p>
+                                <div class="analysis-input-area">
+                                    <div class="analysis-row">
+                                        <div class="analysis-col">
+                                            <h4>简历文件</h4>
+                                            <div class="upload-area competitive-upload" id="competitiveResumeUpload">
+                                                <i class="fas fa-file-upload"></i>
+                                                <p>上传简历文件 (.docx)</p>
+                                                <input type="file" id="competitiveResumeFile" accept=".docx" style="display: none;">
+                                                <button class="btn btn-outline" id="competitiveResumeBtn">选择文件</button>
+                                            </div>
+                                            <p class="upload-note">或使用已解析的简历数据</p>
+                                            <div class="form-group">
+                                                <label for="competitiveJdText">岗位描述 (JD)</label>
+                                                <textarea id="competitiveJdText" placeholder="请输入完整的岗位描述文本..." rows="6"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="analysis-actions">
+                                        <button class="btn btn-primary" id="analyzeCompetitiveness">开始分析</button>
+                                        <button class="btn btn-outline" id="useSampleData">使用示例数据</button>
+                                    </div>
+                                </div>
+                                <div class="analysis-results" id="competitivenessResults">
+                                    <div class="analysis-summary" id="analysisSummary">
+                                        <!-- 分析摘要将通过JavaScript动态加载 -->
+                                    </div>
+                                    <div class="visualization-area" id="visualizationArea">
+                                        <!-- 可视化图表将通过JavaScript动态加载 -->
+                                    </div>
+                                    <div class="recommendations-area" id="recommendationsArea">
+                                        <!-- 改进建议将通过JavaScript动态加载 -->
+                                    </div>
+                                </div>
+                            </div>
+                        <div id="cover-letter-tab" class="tab-pane">
+                            <div class="demo-card">
+                                <h3>AI求职信生成器</h3>
+                                <p>上传简历和岗位描述，AI自动生成个性化求职信，突出匹配优势</p>
+                                <div class="analysis-input-area">
+                                    <div class="analysis-row">
+                                        <div class="analysis-col">
+                                            <h4>简历文件</h4>
+                                            <div class="upload-area competitive-upload" id="coverLetterResumeUpload">
+                                                <i class="fas fa-file-upload"></i>
+                                                <p>上传简历文件 (.docx)</p>
+                                                <input type="file" id="coverLetterResumeFile" accept=".docx" style="display: none;">
+                                                <button class="btn btn-outline" id="coverLetterResumeBtn">选择文件</button>
+                                            </div>
+                                            <p class="upload-note">或使用已解析的简历数据</p>
+                                        </div>
+                                        <div class="analysis-col">
+                                            <div class="form-group">
+                                                <label for="coverLetterJdText">岗位描述 (JD)</label>
+                                                <textarea id="coverLetterJdText" placeholder="请输入完整的岗位描述文本..." rows="6"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="coverLetterCompanyName">公司名称 (可选)</label>
+                                                <input type="text" id="coverLetterCompanyName" placeholder="例如：ABC科技公司">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="coverLetterJobTitle">职位名称 (可选)</label>
+                                                <input type="text" id="coverLetterJobTitle" placeholder="例如：高级销售经理">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="coverLetterTemplateStyle">模板风格</label>
+                                                <select id="coverLetterTemplateStyle">
+                                                    <option value="auto">自动选择</option>
+                                                    <option value="technical">技术岗风格</option>
+                                                    <option value="sales">销售岗风格</option>
+                                                    <option value="management">管理岗风格</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="analysis-actions">
+                                        <button class="btn btn-primary" id="generateCoverLetter">生成求职信</button>
+                                        <button class="btn btn-outline" id="useSampleCoverLetterData">使用示例数据</button>
+                                    </div>
+                                </div>
+                                <div class="analysis-results" id="coverLetterResults">
+                                    <div class="analysis-summary" id="coverLetterSummary">
+                                        <!-- 求职信内容将通过JavaScript动态加载 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="career-transition-tab" class="tab-pane">
+                            <div class="demo-card">
+                                <h3>转行适配方案生成器</h3>
+                                <p>分析现有简历与目标岗位的差距，提供转行建议、学习路径和简历优化指导</p>
+                                <div class="analysis-input-area">
+                                    <div class="analysis-row">
+                                        <div class="analysis-col">
+                                            <h4>简历文件</h4>
+                                            <div class="upload-area competitive-upload" id="careerTransitionResumeUpload">
+                                                <i class="fas fa-file-upload"></i>
+                                                <p>上传简历文件 (.docx)</p>
+                                                <input type="file" id="careerTransitionResumeFile" accept=".docx" style="display: none;">
+                                                <button class="btn btn-outline" id="careerTransitionResumeBtn">选择文件</button>
+                                            </div>
+                                            <p class="upload-note">或使用已解析的简历数据</p>
+                                        </div>
+                                        <div class="analysis-col">
+                                            <div class="form-group">
+                                                <label for="careerTransitionTargetRole">目标岗位</label>
+                                                <input type="text" id="careerTransitionTargetRole" placeholder="例如：数据科学家、产品经理">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="careerTransitionTargetIndustry">目标行业 (可选)</label>
+                                                <input type="text" id="careerTransitionTargetIndustry" placeholder="例如：互联网、金融科技">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="careerTransitionLearningStyle">学习风格</label>
+                                                <select id="careerTransitionLearningStyle">
+                                                    <option value="visual">视觉型</option>
+                                                    <option value="auditory">听觉型</option>
+                                                    <option value="kinesthetic">动手型</option>
+                                                    <option value="reading">阅读型</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="careerTransitionWeeklyHours">每周学习时间 (小时)</label>
+                                                <input type="number" id="careerTransitionWeeklyHours" value="10" min="1" max="40">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="analysis-actions">
+                                        <button class="btn btn-primary" id="generateCareerTransitionPlan">生成转行方案</button>
+                                        <button class="btn btn-outline" id="useSampleCareerTransitionData">使用示例数据</button>
+                                    </div>
+                                </div>
+                                <div class="analysis-results" id="careerTransitionResults">
+                                    <div class="analysis-summary" id="careerTransitionSummary">
+                                        <!-- 转行方案内容将通过JavaScript动态加载 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="section cases-section">
+            <div class="container">
+                <h2 class="section-title">案例展示</h2>
+                <p class="section-subtitle">查看AI求职智能体实际优化案例</p>
+                <div class="case-studies">
+                    <div class="case-card">
+                        <div class="case-header">
+                            <span class="case-tag">销售经理</span>
+                            <span class="case-duration">29岁 · 6年经验</span>
+                        </div>
+                        <h3 class="case-title">销售经理简历优化</h3>
+                        <p class="case-desc">优化前：普通销售经历描述；优化后：数据驱动的销售策略专家，突出业绩指标和团队管理能力</p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-label">关键词匹配度</span>
+                                <span class="metric-value">90%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">可读性提升</span>
+                                <span class="metric-value">+30%</span>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="case-link" data-case="sales">查看优化详情</a>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-header">
+                            <span class="case-tag">渠道开发经理</span>
+                            <span class="case-duration">35岁 · 12年经验</span>
+                        </div>
+                        <h3 class="case-title">渠道开发经理简历优化</h3>
+                        <p class="case-desc">优化前：传统渠道管理描述；优化后：战略级渠道拓展专家，强调合作伙伴生态建设和业绩增长</p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-label">关键词匹配度</span>
+                                <span class="metric-value">85%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">可读性提升</span>
+                                <span class="metric-value">+33%</span>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="case-link" data-case="channel">查看优化详情</a>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-header">
+                            <span class="case-tag">产品经理</span>
+                            <span class="case-duration">28岁 · 5年经验</span>
+                        </div>
+                        <h3 class="case-title">AI生成简历示例</h3>
+                        <p class="case-desc">基于用户输入的基本信息，AI自动生成完整的产品经理简历，包含标准化模块和专业表述</p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <span class="metric-label">结构完整性</span>
+                                <span class="metric-value">100%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">专业性评分</span>
+                                <span class="metric-value">A级</span>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="case-link" data-case="product">查看生成示例</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="api" class="section api-section">
+            <div class="container">
+                <h2 class="section-title">API文档</h2>
+                <p class="section-subtitle">AI求职智能体提供完整的REST API服务，支持第三方集成</p>
+                <div class="api-docs">
+                    <div class="api-endpoint">
+                        <div class="api-method get">POST</div>
+                        <div class="api-path">/api/parse</div>
+                        <div class="api-desc">简历解析接口</div>
+                    </div>
+                    <div class="api-endpoint">
+                        <div class="api-method post">POST</div>
+                        <div class="api-path">/api/optimize</div>
+                        <div class="api-desc">简历优化接口</div>
+                    </div>
+                    <div class="api-endpoint">
+                        <div class="api-method put">POST</div>
+                        <div class="api-path">/api/generate</div>
+                        <div class="api-desc">简历生成接口</div>
+                    </div>
+                    <div class="api-endpoint">
+                        <div class="api-method get">POST</div>
+                        <div class="api-path">/api/interview/generate</div>
+                        <div class="api-desc">生成面试问题</div>
+                    </div>
+                    <div class="api-endpoint">
+                        <div class="api-method post">POST</div>
+                        <div class="api-path">/api/competitiveness/analyze</div>
+                        <div class="api-desc">竞争力分析接口</div>
+                    </div>
+                    <div class="api-endpoint">
+                        <div class="api-method post">POST</div>
+                        <div class="api-path">/api/cover_letter/generate</div>
+                        <div class="api-desc">求职信生成接口</div>
+                    </div>
+                    <div class="api-endpoint">
+                        <div class="api-method post">POST</div>
+                        <div class="api-path">/api/career_transition/plan</div>
+                        <div class="api-desc">转行适配方案生成接口</div>
+                    </div>
+                </div>
+                <div class="api-actions">
+                    <a href="./backend/README.md" class="btn btn-outline" target="_blank">查看完整API文档</a>
+                    <a href="https://github.com/your-repo" class="btn btn-secondary" target="_blank">GitHub仓库</a>
+                </div>
+                <div class="deployment-info">
+                    <h3>一键部署</h3>
+                    <p>本项目支持Vercel和Netlify一键部署，快速上线演示站点</p>
+                    <div class="deploy-buttons">
+                        <a href="https://vercel.com/new/clone?repository-url=https://github.com/your-repo" class="deploy-btn vercel" target="_blank">部署到Vercel</a>
+                        <a href="https://app.netlify.com/start/deploy?repository=https://github.com/your-repo" class="deploy-btn netlify" target="_blank">部署到Netlify</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🤖</span>
+                        <span class="logo-text">AI求职智能体</span>
+                    </div>
+                    <p class="footer-desc">基于AI技术的智能化求职辅助工具</p>
+                </div>
+                <div class="footer-links">
+                    <h4>产品</h4>
+                    <a href="#intro">产品介绍</a>
+                    <a href="#demo">功能演示</a>
+                    <a href="#cases">案例展示</a>
+                    <a href="#api">API文档</a>
+                </div>
+                <div class="footer-links">
+                    <h4>资源</h4>
+                    <a href="./backend/README.md" target="_blank">API文档</a>
+                    <a href="./outputs/demo/演示总结.md" target="_blank">演示总结</a>
+                    <a href="https://github.com/your-repo" target="_blank">GitHub</a>
+                </div>
+                <div class="footer-links">
+                    <h4>联系</h4>
+                    <a href="mailto:contact@example.com">联系邮箱</a>
+                    <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+                    <a href="https://linkedin.com/company/yourcompany" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AI求职智能体. 版权所有. MVP版本 v1.0</p>
+                <p>最后更新: 2026年3月20日</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 模态框用于展示案例详情 -->
+    <div id="caseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">案例详情</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 案例详情内容将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

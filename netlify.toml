@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_ENV = "production"
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
